@@ -34,7 +34,7 @@ RUN curl -fsSL https://deb.nodesource.com/setup_17.x | bash -
 RUN apt-get install -y nodejs
 RUN jupyter labextension install @jupyter-widgets/jupyterlab-manager
 RUN jupyter lab build
-RUN pip install ipympl
+#RUN pip install ipympl
 
 # Upgrade all packages
 # RUN conda upgrade --all
