@@ -14,12 +14,14 @@ USER root
 
 RUN apt-get update --assume-yes
 
+# Remove CONDA Default activation in .bashrc
+RUN sed -i -s '/conda.sh/d' ~/.bashrc
 # Update CONDA to latest version
-RUN conda update -n base -c defaults conda
+#RUN conda update -n base -c defaults conda
 
 # Install python modules available threw CONDA
 ADD ./requirements-conda.txt /tmp/requirements-conda.txt
-RUN conda install --file /tmp/requirements-conda.txt && rm /tmp/requirements-conda.txt
+RUN pip install -r /tmp/requirements-conda.txt && rm /tmp/requirements-conda.txt
 
 
 # Install python modules ONLY available threw PIP
