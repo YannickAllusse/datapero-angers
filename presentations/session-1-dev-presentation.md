@@ -11,6 +11,7 @@ Today's goal are:
 
 => You will need an internt connexion...
 
+Find more on https://github.com/girardea/datapero-angers
 
 
 --newpage DEALING_WITH_DATA_PROCESSING
